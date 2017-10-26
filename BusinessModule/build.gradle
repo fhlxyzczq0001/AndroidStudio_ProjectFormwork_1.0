@@ -1,0 +1,41 @@
+if (IsBuildMudle.toBoolean()) {
+    //以module的形式引入
+    apply plugin: 'com.android.application'
+    apply from: "module_build.gradle"
+} else {
+//以Lib的形式引入
+    apply plugin: 'com.android.library'
+    apply from: "library_build.gradle"
+}
+
+//路由机制
+apply plugin: 'com.chenenyu.router'
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':CommonModule')
+    compile project(':UserInfoModule')//用户lib
+}
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    sourceSets {
+        main {
+            if (IsBuildMudle.toBoolean()) {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            }
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs', '../CommonModule/libs'
+        }
+    }
+}

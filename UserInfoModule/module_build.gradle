@@ -1,0 +1,70 @@
+android {
+    //Android Studio 编译不通过，报错“找不到org.apache.http。。。”如果你使用的 target sdk是23请在build.gradle加入android{ useLibrary ‘org.apache.http.legacy‘ }
+    useLibrary "org.apache.http.legacy"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    signingConfigs {
+        release {
+            keyAlias '杭州融都科技股份有限公司'
+            keyPassword 'rongdu'
+            storeFile file('D:/AS_WS/AndroidStudio_ProjectFormwork_1.0/app/rongdu')
+            storePassword 'rongdu123'
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.ddtkj.projectformwork.userinfo"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            // zipAlign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled false//混淆
+            signingConfig signingConfigs.release//这样编译出来的debug版本直接用的是正式签名噢。太棒了
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+        debug {
+            // zipAlign优化
+            zipAlignEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false//混淆
+            signingConfig signingConfigs.release//这样编译出来的debug版本直接用的是正式签名噢。太棒了
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    dexOptions {
+        preDexLibraries = false//禁用预编译
+        //加大Java堆内存大小
+        maxProcessCount 4 // this is the default value
+        javaMaxHeapSize "2g"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility rootProject.ext.sourceCompatibility
+        targetCompatibility rootProject.ext.targetCompatibility
+    }
+}
+

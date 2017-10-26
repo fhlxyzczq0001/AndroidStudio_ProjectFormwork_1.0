@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">"BusinessModule"</string>
+    <string name="business_title_home">首页</string>
+    <string name="business_title_help">找人帮忙</string>
+    <string name="business_title_msg">消息</string>
+    <string name="business_title_myinfo">我的账户</string>
+</resources>

@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.chenenyu.router'
+// 依赖插件脚本
+apply from: 'tinker-support.gradle'
+//普通打包引入的gradle
+apply from: "common_build.gradle"
+//分包动态设置包名等属性引用的gradle
+/*apply from: "subpackage_build.gradle"*/
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+//非module编译
+    if (!IsBuildMudle.toBoolean()) {
+        compile project(':UserInfoModule')//用户lib
+        compile project(':BusinessModule')//业务lib
+    }
+//公共module
+    compile project(':CommonModule')
+//解决65536
+    compile rootProject.ext.dependencies.multidex
+//butterknife框架
+    compile rootProject.ext.dependencies.butterknife
+//butterknife框架快速注解
+    apt rootProject.ext.dependencies.butterknifeCompiler
+//bugly热修复
+    compile rootProject.ext.dependencies.buglyUpgrad
+    compile rootProject.ext.dependencies.buglyRelease
+}

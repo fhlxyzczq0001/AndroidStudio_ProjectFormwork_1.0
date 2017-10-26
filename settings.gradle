@@ -1,0 +1,28 @@
+include ':app', ':AndroidStudio_CommonLibrary', ':CommonModule', ':UserInfoModule', ':BusinessModule'
+project(':AndroidStudio_CommonLibrary').projectDir = new File('../AndroidStudio_CommonLibrary/')
+include ':AndroidStudio_CommonLibrary:rxretrofitlibrary',//网络请求框架
+        ':AndroidStudio_CommonLibrary:UtilsLib',//工具类集合
+        ':AndroidStudio_CommonLibrary:CustomViewLib',//自定义View集合
+        ':AndroidStudio_CommonLibrary:myDialog',
+        ':AndroidStudio_CommonLibrary:shapeloading',//加载动画
+        ':AndroidStudio_CommonLibrary:customActivityOnCarsh',//异常捕获
+        ':AndroidStudio_CommonLibrary:viewpager_library',//轮播图
+        ':AndroidStudio_CommonLibrary:pulltorefresh',//下拉刷新
+        ':AndroidStudio_CommonLibrary:verticaltablayout',//垂直导航
+        ':AndroidStudio_CommonLibrary:imagepicker',//图片选择框架
+        ':AndroidStudio_CommonLibrary:homemenuviewpager',//菜单
+        ':AndroidStudio_CommonLibrary:viewpagerindicator_lib',//水平导航框架
+        ':AndroidStudio_CommonLibrary:guide_lib',//引导页框架
+        ':AndroidStudio_CommonLibrary:unmeng_share_librarys',//Umeng分享
+        ':AndroidStudio_CommonLibrary:wheelview_library',//3级联动
+        ':AndroidStudio_CommonLibrary:iapppay_res',//支付
+        ':AndroidStudio_CommonLibrary:wepayLib',//支付
+        ':AndroidStudio_CommonLibrary:pay_library',//支付
+        ':AndroidStudio_CommonLibrary:download_anim_library',//下载框架
+        ':AndroidStudio_CommonLibrary:glide_library',//glide图片加载
+        ':AndroidStudio_CommonLibrary:superadapter',//通用Adapter
+        ':AndroidStudio_CommonLibrary:litepal',//数据库框架
+        ':AndroidStudio_CommonLibrary:materialdesign',
+        ':AndroidStudio_CommonLibrary:lsettingviewlibrary',//快速设置界面条目封装框架
+        ':AndroidStudio_CommonLibrary:RippleEffect_Lib'//Material Design带水波纹的动画效果框架
+

@@ -1,0 +1,138 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.chenenyu.router'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        //是否是module编译
+        if (!IsBuildMudle.toBoolean()) {//非module编译
+            buildConfigField "boolean", "IsBuildMudle", "false"
+        }else {
+            buildConfigField "boolean", "IsBuildMudle", "true"
+        }
+        //是否请求HttpDns
+        if (!IsHttpDns.toBoolean()) {//不请求HttpDns
+            buildConfigField "boolean", "IsRequestHttpDns", "false"
+        }else {
+            buildConfigField "boolean", "IsRequestHttpDns", "true"
+        }
+        //是否强制开启POST请求
+        if (!IsHttpPost.toBoolean()) {//不强制
+            buildConfigField "boolean", "IsHttpPost", "false"
+        }else {
+            buildConfigField "boolean", "IsHttpPost", "true"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility rootProject.ext.sourceCompatibility
+        targetCompatibility rootProject.ext.targetCompatibility
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+//lib包的引入
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+//单元测试框架
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+//========================com===========================
+//v7包
+    compile rootProject.ext.dependencies.appcompatV7
+//design包
+    compile rootProject.ext.dependencies.design
+//解决65536
+    compile rootProject.ext.dependencies.multidex
+/*//极光推送 此处以JPush 3.0.0 版本为例。
+    compile rootProject.ext.dependencies.jpush
+//极光推送 此处以JCore 1.0.0 版本为例。
+    compile rootProject.ext.dependencies.core*/
+//json解析框架
+    compile rootProject.ext.dependencies.fastjson
+//eventbus通信框架
+    compile rootProject.ext.dependencies.eventbus
+//butterknife框架
+    compile rootProject.ext.dependencies.butterknife
+//butterknife框架快速注解
+    apt rootProject.ext.dependencies.butterknifeCompiler
+//开源动画库
+    compile rootProject.ext.dependencies.nineoldandroids
+//Rxpermissions权限管理框架
+    compile rootProject.ext.dependencies.Rxpermissions
+//图片压缩框架
+    compile rootProject.ext.dependencies.Luban
+//==========================lib===========================
+//极验验证
+    compile(name: 'gt3geetest_sdk',ext: 'aar')
+//==========================CommonLib===========================
+//网络请求框架
+    compile project(rootProject.ext.dependencies.CommonLibraryRxretrofit_Library)
+//系统异常显示默认activity
+    compile project(rootProject.ext.dependencies.CommonLibraryCustomActivityOnCarsh)
+//工具类集合
+    compile project(rootProject.ext.dependencies.CommonLibraryUtilsLib)
+//自定义View集合
+    compile project(rootProject.ext.dependencies.CommonLibraryCustomViewLib)
+//本地照片展示框架
+    compile project(rootProject.ext.dependencies.CommonLibraryImagepicker)
+//pulltorefresh下拉刷新框架
+    compile project(rootProject.ext.dependencies.CommonLibraryPulltorefresh)
+//materialdesign动画集成
+    compile project(rootProject.ext.dependencies.CommonLibraryMaterialDesign)
+//友盟分享
+    compile project(rootProject.ext.dependencies.CommonLibraryUnmengShareLibrarys)
+//glide图片库
+    compile project(rootProject.ext.dependencies.CommonLibraryGlideLibrary)
+//下载动画
+    compile project(rootProject.ext.dependencies.CommonLibraryDownloadAnimLibrary)
+//支付
+    compile project(rootProject.ext.dependencies.CommonLibraryPayLibrary)
+//水平滚动导航指示器
+    compile project(rootProject.ext.dependencies.CommonLibraryViewpagerIndicatorLib)
+//轮播图
+    compile project(rootProject.ext.dependencies.CommonLibraryViewpagerLibrary)
+//首页滚动菜单设置
+    compile project(rootProject.ext.dependencies.CommonLibraryHomeMenuViewpager)
+//通用Adapter
+    compile project(rootProject.ext.dependencies.CommonLibrarySuperadapter)
+//垂直导航
+    compile project(rootProject.ext.dependencies.CommonLibraryVerticalTabLayout)
+//快速设置界面条目封装框架
+    compile project(rootProject.ext.dependencies.CommonLibraryLsettingviewlibrary)
+//3级联动
+    compile project(rootProject.ext.dependencies.CommonLibraryWheelviewLibrary)
+//加载动画对话框
+    compile project(rootProject.ext.dependencies.CommonLibraryShapeLoading)
+//弹出对话框
+    compile project(rootProject.ext.dependencies.CommonLibraryMyDialog)
+//引导页框架
+    compile project(rootProject.ext.dependencies.CommonLibraryGuideLib)
+//Material Design带水波纹的动画效果框架
+    compile project(rootProject.ext.dependencies.CommonLibraryRippleEffect)
+
+}

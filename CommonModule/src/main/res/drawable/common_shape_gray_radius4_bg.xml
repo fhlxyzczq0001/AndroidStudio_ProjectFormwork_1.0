@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<solid android:color="#99CCFF" />-->
+    <corners android:topLeftRadius="@dimen/x4"
+        android:topRightRadius="@dimen/x4"
+        android:bottomRightRadius="@dimen/x4"
+        android:bottomLeftRadius="@dimen/x4"/>
+    <stroke android:width="1px" android:color="@color/app_navigation" />
+</shape>

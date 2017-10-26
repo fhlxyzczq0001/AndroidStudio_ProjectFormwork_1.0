@@ -1,0 +1,100 @@
+android {
+    //Android Studio 编译不通过，报错“找不到org.apache.http。。。”如果你使用的 target sdk是23请在build.gradle加入android{ useLibrary ‘org.apache.http.legacy‘ }
+    useLibrary "org.apache.http.legacy"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    signingConfigs {
+        release {
+            keyAlias '杭州融都科技股份有限公司'
+            keyPassword 'rongdu'
+            storeFile file('D:/AS_WS/AndroidStudio_ProjectFormwork_1.0/app/rongdu')
+            storePassword 'rongdu123'
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.ddtkj.projectformwork"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        // AndroidManifest.xml 里面UMENG_CHANNEL的value为 ${UMENG_CHANNEL_VALUE}
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "channel_name"]
+        multiDexEnabled true
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a','x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+               /* 正式key：ef2b9bb291e3d2442a0b12d7    测试key:c2c242870c3b0182da45b93c*/
+                JPUSH_APPKEY : "c2c242870c3b0182da45b93c", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "dadetong", //暂时填写默认值即可.
+        ]
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    //渠道Flavors，我这里写了一些常用的
+    productFlavors {
+        dadetong {}
+        GooglePlay {}
+        xiaomi {}
+        umeng {}
+    }
+
+    buildTypes {
+        release {
+            // zipAlign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled false//混淆
+            signingConfig signingConfigs.release//这样编译出来的debug版本直接用的是正式签名噢。太棒了
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+        debug {
+            // zipAlign优化
+            zipAlignEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false//混淆
+            signingConfig signingConfigs.release//这样编译出来的debug版本直接用的是正式签名噢。太棒了
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    dexOptions {
+        preDexLibraries = false//禁用预编译
+        //加大Java堆内存大小
+        maxProcessCount 4 // this is the default value
+        javaMaxHeapSize "2g"
+    }
+    //解决Android Studio编译报错“java.lang.OutOfMemoryError: GC overhead limit exceeded”
+    /*dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }*/
+
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    repositories {
+        flatDir {
+            dirs 'libs', '../CommonModule/libs'
+        }
+    }
+}
+

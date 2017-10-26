@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/AndroidStudio_CommonLibrary.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/AndroidStudio_CommonLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidStudio_ProjectFormwork_1.0.iml" filepath="$PROJECT_DIR$/AndroidStudio_ProjectFormwork_1.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BusinessModule/BusinessModule.iml" filepath="$PROJECT_DIR$/BusinessModule/BusinessModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonModule/CommonModule.iml" filepath="$PROJECT_DIR$/CommonModule/CommonModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/CustomViewLib/CustomViewLib.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/CustomViewLib/CustomViewLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/RippleEffect_Lib/RippleEffect_Lib.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/RippleEffect_Lib/RippleEffect_Lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UserInfoModule/UserInfoModule.iml" filepath="$PROJECT_DIR$/UserInfoModule/UserInfoModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/UtilsLib/UtilsLib.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/UtilsLib/UtilsLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/customActivityOnCarsh/customActivityOnCarsh.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/customActivityOnCarsh/customActivityOnCarsh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/download_anim_library/download_anim_library.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/download_anim_library/download_anim_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/glide_library/glide_library.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/glide_library/glide_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/guide_lib/guide_lib.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/guide_lib/guide_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/homemenuviewpager/homemenuviewpager.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/homemenuviewpager/homemenuviewpager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/iapppay_res/iapppay_res.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/iapppay_res/iapppay_res.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/imagepicker/imagepicker.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/imagepicker/imagepicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/litepal/litepal.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/litepal/litepal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/lsettingviewlibrary/lsettingviewlibrary.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/lsettingviewlibrary/lsettingviewlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/materialdesign/materialdesign.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/materialdesign/materialdesign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/myDialog/myDialog.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/myDialog/myDialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/pay_library/pay_library.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/pay_library/pay_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/pulltorefresh/pulltorefresh.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/pulltorefresh/pulltorefresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/rxretrofitlibrary/rxretrofitlibrary.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/rxretrofitlibrary/rxretrofitlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/shapeloading/shapeloading.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/shapeloading/shapeloading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/superadapter/superadapter.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/superadapter/superadapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/unmeng_share_librarys/unmeng_share_librarys.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/unmeng_share_librarys/unmeng_share_librarys.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/verticaltablayout/verticaltablayout.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/verticaltablayout/verticaltablayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/viewpager_library/viewpager_library.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/viewpager_library/viewpager_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/viewpagerindicator_lib/viewpagerindicator_lib.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/viewpagerindicator_lib/viewpagerindicator_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/wepayLib/wepayLib.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/wepayLib/wepayLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../AndroidStudio_CommonLibrary/wheelview_library/wheelview_library.iml" filepath="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/wheelview_library/wheelview_library.iml" />
+    </modules>
+  </component>
+</project>

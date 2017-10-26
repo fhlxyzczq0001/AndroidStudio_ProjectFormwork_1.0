@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/CustomViewLib" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/RippleEffect_Lib" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/UtilsLib" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/customActivityOnCarsh" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/download_anim_library" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/glide_library" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/guide_lib" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/homemenuviewpager" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/iapppay_res" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/imagepicker" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/litepal" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/lsettingviewlibrary" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/materialdesign" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/myDialog" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/pay_library" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/pulltorefresh" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/rxretrofitlibrary" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/shapeloading" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/superadapter" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/unmeng_share_librarys" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/verticaltablayout" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/viewpager_library" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/viewpagerindicator_lib" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/wepayLib" />
+            <option value="$PROJECT_DIR$/../AndroidStudio_CommonLibrary/wheelview_library" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/BusinessModule" />
+            <option value="$PROJECT_DIR$/CommonModule" />
+            <option value="$PROJECT_DIR$/UserInfoModule" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

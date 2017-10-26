@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--启动页-->
+<LinearLayout
+    android:id="@+id/lyParent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <include layout="@layout/common_customview_toolbar_layout"
+    />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        >
+
+            <ImageView
+                android:id="@+id/imgWelcome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+            />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:scaleType="centerInside"
+                android:visibility="gone"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/lyCircleTextProgressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
+
+            <com.customview.lib.CircleTextProgressbar
+                android:id="@+id/cusCircleTextProgressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip"
+                android:text="跳过"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size3"
+                app:in_circle_color="@color/app_color"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

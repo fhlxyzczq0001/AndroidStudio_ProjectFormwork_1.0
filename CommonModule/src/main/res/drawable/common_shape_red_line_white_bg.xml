@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:Android="http://schemas.android.com/apk/res/android"> 
+    <padding Android:left="0sp" Android:top="0sp" Android:right="0sp" Android:bottom="0sp" />
+        <stroke Android:width="1dip" Android:color="@color/app_color" />
+         <corners 
+            Android:radius="1dip"
+            />
+ <solid Android:color="@color/white" />         
+
+    <padding
+        Android:top="5dip"
+        Android:bottom="5dip"
+        Android:left="15dip"
+        Android:right="15dip"/>
+ 
+ <!-- <gradient  
+        Android:startColor="#d4cfcf"
+        Android:centerColor="#F5F5F5"
+        Android:endColor="#ffffff"  
+        Android:angle="270"
+        Android:centerY="0.02"
+         />   -->
+ 
+ 
+<!--  里面我们定义了一个shape对象，实现背景drawable形状，其中padding代表距离边框，这里我们设置了左、上、右、下四个位置的间距。
+ stroke可以制造出一些3D立体效果，corners是四个角，radisu属性可以设置半径，值越大越圆滑，根据运行效果你可以微调，
+ 最后soild是填充颜色，这里我们用了ffffff表示纯白。 -->
+
+ 
+    
+</shape>
+

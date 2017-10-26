@@ -1,0 +1,24 @@
+<manifest package="com.ddtkj.projectformwork.common"
+
+          xmlns:android="http://schemas.android.com/apk/res/android"
+>
+
+    <application android:allowBackup="true"
+                 android:label="@string/app_name"
+                 android:supportsRtl="true"
+    >
+        <!--网络异常显示的Activity-->
+        <activity
+            android:name=".MVP.View.Implement.Activity.Common_Act_NetworkError_Implement"
+            android:theme="@style/defaultStyle"
+            android:launchMode="singleTask"
+        />
+        <!--WebView的Activity-->
+        <activity
+            android:name=".MVP.View.Implement.Activity.Common_Act_WebView_View_Implement"
+            android:theme="@style/defaultStyle"
+            android:launchMode="singleTask"
+        />
+    </application>
+
+</manifest>

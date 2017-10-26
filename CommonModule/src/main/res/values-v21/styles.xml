@@ -1,0 +1,6 @@
+<resources>
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- 导航栏底色，仅能在 API v21 也就是 Android 5 以后的版本中使用， 因此要将之设定在 res/values-v21/styles.xml 里面 -->
+        <item name="android:navigationBarColor">@color/accent_material_light</item>
+    </style>
+</resources>

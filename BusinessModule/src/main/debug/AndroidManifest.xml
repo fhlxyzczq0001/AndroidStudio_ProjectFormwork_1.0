@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.ddtkj.projectformwork.business"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:name=".Base.Application.debug.Business_Application"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/common_icon_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--主Activity-->
+        <activity
+            android:name=".MVP.View.Implement.Activity.Business_MainActivity"
+            android:theme="@style/defaultStyle"
+            android:launchMode="singleTask"
+        >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

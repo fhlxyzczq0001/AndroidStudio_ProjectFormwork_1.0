@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <!--  动画代码，在res下创建anim文件夹，新建名为rotate的文件，添加代码如下
+
+    <?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+  <common_rotate_clockwise
+      android:duration="200"//动画的持续时间
+  android:fromDegrees="0"//起始角度，0代表当前位置
+  android:pivotX="50%"//旋转中心的x坐标，50%代表当前控件的水平中心
+  android:pivotY="50%"//旋转中心的y坐标，50%代表当前控件的垂直中心
+  android:repeatMode="reverse"//重复模式，reverse代表与原动画反向
+  android:toDegrees="180"//结束角度
+  />
+</set>
+
+    生成动画
+    Animation common_rotate_clockwise = AnimationUtils.loadAnimation(getActivity(), R.anim.common_rotate_clockwise);//创建动画
+    common_rotate_clockwise.setInterpolator(new LinearInterpolator());//设置为线性旋转
+
+    ImageView imageView = (ImageView) view.findViewById(R.id.iv_secondpage_parent_arrow);
+    为imageView设置点击事件，并添加如下代码
+    common_rotate_clockwise.setFillAfter(!common_rotate_clockwise.getFillAfter());//每次都取相反值，使得可以不恢复原位的旋转imageView.startAnimation(common_rotate_clockwise);
+
+
+    common_rotate_clockwise.setFillAfter(boolean)此代码设置为true则控件会停留在旋转后的位置，false则旋转后会恢复原位，显然
+    需求是点一次停留在旋转后的位置，再点一次恢复原位，所以true或者false都不合适，所以需要动态的设置，
+    即：
+    common_rotate_clockwise.setFillAfter(!common_rotate_clockwise.getFillAfter());//每次都取相反值，使得可以不恢复原位的旋转-->
+
+<!--顺时针旋转180度-->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+  <rotate
+  android:duration="200"
+  android:fromDegrees="0"
+  android:pivotX="50%"
+  android:pivotY="50%"
+  android:repeatMode="reverse"
+  android:toDegrees="180"
+  />
+</set>
+   

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+     <!-- 背景色 -->
+  	 <solid android:color="@color/app_color" />
+    <!-- 边框色 -->
+    <!-- <stroke android:width="0.3dip" android:color="#ffffff" /> -->
+    <!-- 边角：设置圆角大小 -->
+    <corners
+        android:radius="3dip" />
+    <padding 
+        android:left="2dip"
+        android:right="2dip"/>
+    
+    
+
+</shape>

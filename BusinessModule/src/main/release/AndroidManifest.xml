@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.ddtkj.projectformwork.business"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--主Activity-->
+        <activity
+            android:name=".MVP.View.Implement.Activity.Business_MainActivity"
+            android:theme="@style/defaultStyle"
+            android:launchMode="singleTask"
+        />
+    </application>
+
+</manifest>
